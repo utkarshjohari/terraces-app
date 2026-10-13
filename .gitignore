@@ -1,0 +1,12 @@
+# Python ignores
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Node ignores
+frontend/node_modules/
+frontend/.next/
+
+# Database and OS ignores
+*.db
+.DS_Store
