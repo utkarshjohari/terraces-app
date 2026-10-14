@@ -53,7 +53,7 @@ def get_db():
 class ProfileCreate(BaseModel):
     name: str
     email: str
-    social_link: str
+    social_link: Optional[str] = "" # <--- Made optional here
     floorplan: str
     budget: int
     strict_budget: bool
@@ -75,7 +75,7 @@ def populate_dummy_data():
             Profile(name="Alex", email="alex@rice.edu", social_link="linkedin.com/in/alex", floorplan="2 Bed / 2 Bath", budget=1300, strict_budget=True, is_group=False, move_in="2026-11-01", cleanliness="Spotless", sleep_schedule="Early Bird", work_setup="Hybrid", pets=False, smoking=False, bio="Incoming MBA at Rice. Study-focused during the week, need a quiet environment.", created_at=datetime.utcnow()),
             Profile(name="Jordan", email="jordan.tech@gmail.com", social_link="instagram.com/jordan", floorplan="Open to Any", budget=1100, strict_budget=False, is_group=False, move_in="2026-11-15", cleanliness="Lived-in", sleep_schedule="Night Owl", work_setup="Remote", pets=True, smoking=False, bio="Software engineer working from home. I have a 15lb Corgi. Super laid back on weekends.", created_at=datetime.utcnow()),
             Profile(name="Casey & Sam", email="casey@mbb.com", social_link="linkedin.com/in/casey", floorplan="3 Bed / 3 Bath", budget=1200, strict_budget=False, is_group=True, move_in="2026-12-01", cleanliness="Spotless", sleep_schedule="9-to-5", work_setup="In-Office", pets=False, smoking=False, bio="We are two friends looking for a third roommate to split a massive 3-bedroom unit.", created_at=datetime.utcnow()),
-            Profile(name="Taylor", email="taylor.med@tmc.edu", social_link="linkedin.com/in/taylor", floorplan="3 Bed / 2 Bath", budget=1250, strict_budget=False, is_group=False, move_in="2026-11-01", cleanliness="Messy", sleep_schedule="Night Owl", work_setup="In-Office", pets=False, smoking=True, bio="Medical resident at TMC. Crazy hours, rarely home. Just need a place to crash and shower.", created_at=datetime.utcnow())
+            Profile(name="Taylor", email="taylor.med@tmc.edu", social_link="", floorplan="3 Bed / 2 Bath", budget=1250, strict_budget=False, is_group=False, move_in="2026-11-01", cleanliness="Messy", sleep_schedule="Night Owl", work_setup="In-Office", pets=False, smoking=True, bio="Medical resident at TMC. Crazy hours, rarely home. Just need a place to crash and shower.", created_at=datetime.utcnow())
         ])
         db.commit()
     db.close()
