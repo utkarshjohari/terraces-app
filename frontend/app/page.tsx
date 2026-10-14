@@ -128,7 +128,7 @@ export default function Home() {
             <div className="max-w-2xl relative z-10 space-y-4">
               <span className="bg-blue-100 text-blue-800 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full">Pilot Program</span>
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.1]">
-                Find your flatmate at <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Terraces on Brompton.</span>
+                Find your roommate at <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Terraces on Brompton.</span>
               </h1>
               <p className="text-lg text-gray-600 font-medium">
                 Smarter matches based on unit availability, budget overlap, and <strong>actual lifestyle dealbreakers.</strong>
